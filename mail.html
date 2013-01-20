@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm()
+{
+var x=document.forms["emailForm"]["toemailid"].value;
+if (x==null || x=="")
+  {
+  alert("Please enter email address !");
+  return false;
+  }
+}
+</script>
+</head>
+
+<body>
+<form name="emailForm" action="sendMail.php" method="post" onsubmit="return validateForm()">
+Email ID :<input type="text" name="toemailid">
+<br>
+<input type="submit" name="sendMail" value="SEND MAIL">
+</form>
+</body>
+</html>
